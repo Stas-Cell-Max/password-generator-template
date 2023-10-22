@@ -13,8 +13,14 @@ body,
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+	background-color: #7891a0;
+	color: #fff;
+	font-family: 'Muli', sans-serif;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	min-height: 150vh;
+  min-width: 200vh;
 }
 
 .wrapper {
@@ -27,19 +33,21 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(203, 14%, 89%);
+  
 }
 
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
-  border-width: 1px;
+  border-width: 2px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  font-family: 'Muli', sans-serif;
 }
 
 .card-header::after {
@@ -56,6 +64,7 @@ header {
 
 .card-footer {
   text-align: center;
+  font-family: 'Muli', sans-serif;
 }
 
 .card-footer::before {
@@ -74,7 +83,7 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: hsl(0, 45%, 47%);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
