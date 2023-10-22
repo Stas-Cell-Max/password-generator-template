@@ -9,6 +9,7 @@ This is a simple password generator web application that allows users to generat
 - [How It Works](#how-it-works)
 - [Contributing](#contributing)
 - [License](#license)
+- [Credits](#credits)
 
 ## Features
 
@@ -35,3 +36,10 @@ If you'd like to contribute to this project, please open an issue or submit a pu
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Credits
+
+https://owasp.org/www-community/password-special-characters
+https://developer.mozilla.org/
+https://www.w3schools.com
+
