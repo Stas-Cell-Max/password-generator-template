@@ -1,84 +1,94 @@
+
 document.addEventListener("DOMContentLoaded", function () {
-  const generateBtn = document.querySelector("#generate");
-  generateBtn.addEventListener("click", displayPassword);
+   
+   // Function to generate a password
+   function generatePassword() {
+     var length = getPasswordLength();
+     if (length === null) {
+       return ""; // User is canceled or entered invalid input
+     }
 
-  function displayPassword() {
-    const password = generatePassword();
-    const passwordText = document.querySelector("#password");
-    passwordText.value = password;
-  }
+     var characterTypes = getCharacterTypes();
+     if (characterTypes.length === 0) {
+       alert("You must select at least one character type.");
+       return "";
+     }
 
-  function generatePassword() {
-    const length = getPasswordLength();
-    if (length === null) {
-      return ""; // User canceled or entered invalid input
-    }
+     var password = generateRandomPassword(length, characterTypes);
+     return password;
+   }
 
-    const characterTypes = getCharacterTypes();
-    if (characterTypes.length === 0) {
-      alert("You must select at least one character type.");
-      return "";
-    }
+   // Function to prompt the user for the password length
+   function getPasswordLength() {
+     while (true) {
+       var length = prompt("Enter the length of the password (8-128 characters):");
 
-    const password = generateRandomPassword(length, characterTypes);
-    return password;
-  }
+       if (length === null) {
+         return null; // User canceled
+       }
 
-  function getPasswordLength() {
-    while (true) {
-      const length = prompt("Enter the length of the password (8-128 characters):");
+       var parsedLength = parseInt(length);
 
-      if (length === null) {
-        return null; // User canceled
-      }
+       if (!isNaN(parsedLength) && parsedLength >= 8 && parsedLength <= 128) {
+         return parsedLength;
+       } else {
+         alert("Password length must be between 8 and 128 characters.");
+       }
+     }
+   }
 
-      const parsedLength = parseInt(length);
+   // Function to prompt the user for the character types to include
+   function getCharacterTypes() {
+     var useLowercase = confirm("Include lowercase letters?");
+     var useUppercase = confirm("Include uppercase letters?");
+     var useNumeric = confirm("Include numbers?");
+     var useSpecialChars = confirm("Include special characters?");
 
-      if (!isNaN(parsedLength) && parsedLength >= 8 && parsedLength <= 128) {
-        return parsedLength;
-      } else {
-        alert("Password length must be between 8 and 128 characters.");
-      }
-    }
-  }
+     var characterTypes = [];
 
-  function getCharacterTypes() {
-    const useLowercase = confirm("Include lowercase letters?");
-    const useUppercase = confirm("Include uppercase letters?");
-    const useNumeric = confirm("Include numbers?");
-    const useSpecialChars = confirm("Include special characters?");
+     if (useLowercase) characterTypes.push("lowercase");
+     if (useUppercase) characterTypes.push("uppercase");
+     if (useNumeric) characterTypes.push("numeric");
+     if (useSpecialChars) characterTypes.push("special");
 
-    const characterTypes = [];
+     return characterTypes;
+   }
 
-    if (useLowercase) characterTypes.push("lowercase");
-    if (useUppercase) characterTypes.push("uppercase");
-    if (useNumeric) characterTypes.push("numeric");
-    if (useSpecialChars) characterTypes.push("special");
+   // Function to generate a random password based on Acceptance criteria
+   function generateRandomPassword(length, characterTypes) {
+     var charsets = {
+       lowercase: "abcdefghijklmnopqrstuvwxyz",
+       uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+       numeric: "0123456789",
+       special: "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~",
+     };
 
-    return characterTypes;
-  }
+     let charset = "";
 
-  function generateRandomPassword(length, characterTypes) {
-    const charsets = {
-      lowercase: "abcdefghijklmnopqrstuvwxyz",
-      uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-      numeric: "0123456789",
-      special: "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~",
-    };
+     for (var type of characterTypes) {
+       charset += charsets[type];
+     }
 
-    let charset = "";
+     let password = "";
 
-    for (const type of characterTypes) {
-      charset += charsets[type];
-    }
+     for (let i = 0; i < length; i++) {
+       const randomIndex = Math.floor(Math.random() * charset.length);
+       password += charset.charAt(randomIndex);
+     }
 
-    let password = "";
+     return password;
+   } 
 
-    for (let i = 0; i < length; i++) {
-      const randomIndex = Math.floor(Math.random() * charset.length);
-      password += charset.charAt(randomIndex);
-    }
+   // Select the "Generate Password" button
+   var generateBtn = document.querySelector("#generate");
 
-    return password;
-  }
+   // Attach a click event listener to the button to display the password
+   generateBtn.addEventListener("click", displayPassword);
+
+    // Function to display the generated password
+   function displayPassword() {
+     var password = generatePassword();
+     var passwordText = document.querySelector("#password");
+     passwordText.value = password;
+   }
 });
