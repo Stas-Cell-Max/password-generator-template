@@ -1,1 +1,1 @@
-# password-generator-template
+# Password Generator Starter Code
