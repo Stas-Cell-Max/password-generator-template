@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
    function generatePassword() {
      var length = getPasswordLength();
      if (length === null) {
-       return ""; // User is canceled or entered invalid input
-     }
+       return ""; 
+     } // User is canceled if entered an invalid input
 
      var characterTypes = getCharacterTypes();
      if (characterTypes.length === 0) {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
      }
    }
 
-   // Function to prompt the user for the character types to include
+   // Function to prompt the user to include the character types 
    function getCharacterTypes() {
      var useLowercase = confirm("Include lowercase letters?");
      var useUppercase = confirm("Include uppercase letters?");
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
      return characterTypes;
    }
 
-   // Function to generate a random password based on Acceptance criteria
+   // Function to generate a random password based on Acceptance Criteria
    function generateRandomPassword(length, characterTypes) {
      var charsets = {
        lowercase: "abcdefghijklmnopqrstuvwxyz",

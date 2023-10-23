@@ -13,9 +13,9 @@ body,
 }
 
 body {
-	background-color: #7891a0;
+	background-color: hsl(180, 20%, 75%);
 	color: #fff;
-	font-family: 'Muli', sans-serif;
+	font-family: 'Candara Light', sans-serif;
 	align-items: center;
 	justify-content: center;
 	padding: 10px;
@@ -27,18 +27,20 @@ body {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  background-color: hsl(180, 20%, 75%);
 }
 
 header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(203, 14%, 89%);
+  color: hsl(202, 94%, 14%);
+  font-family: 'Candara Light';
   
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(170, 15%, 85%);
   border-radius: 5px;
   border-width: 2px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -47,7 +49,7 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
-  font-family: 'Muli', sans-serif;
+  font-family: 'Candara Light', sans-serif;
 }
 
 .card-header::after {
@@ -60,19 +62,19 @@ header {
 
 .card-body {
   min-height: 100px;
+  background-color: hsl(170, 15%, 85%);
 }
 
 .card-footer {
   text-align: center;
-  font-family: 'Muli', sans-serif;
+  font-family: 'Candara Light', sans-serif;
+  background-color: hsl(170, 15%, 85%);
 }
 
 .card-footer::before {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
-  height: 2px;
 }
 
 .card-footer::after {
@@ -82,10 +84,9 @@ header {
 }
 
 .btn {
-  border: none;
-  background-color: hsl(0, 45%, 47%);
+  background-color: hsl(194, 89%, 21%);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+  box-shadow: rgba(0.5, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0.5, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
@@ -95,11 +96,14 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  overflow: hidden;
 }
+
+
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background-color: hsl(180, 30%, 54%);
 }
 
 .float-right {
@@ -133,7 +137,6 @@ button[disabled] {
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
-
   #password {
     font-size: 1rem;
   }
