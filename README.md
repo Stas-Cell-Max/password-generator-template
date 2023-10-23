@@ -41,3 +41,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 https://owasp.org/www-community/password-special-characters
 https://developer.mozilla.org/
+<<<<<<< HEAD
+=======
+https://www.w3schools.com
+
+>>>>>>> ef024a8bd230a767b48153b05c934ae0fdf70bf2
