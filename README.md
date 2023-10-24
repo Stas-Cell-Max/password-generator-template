@@ -41,8 +41,14 @@ This project is licensed under the [MIT License](LICENSE).
 
 https://owasp.org/www-community/password-special-characters
 https://developer.mozilla.org/
-<<<<<<< HEAD
-=======
-https://www.w3schools.com
 
->>>>>>> ef024a8bd230a767b48153b05c934ae0fdf70bf2
+## Deployment
+
+https://stas-cell-max.github.io/password-generator-template/
+
+![password-generator_Stanislav-Morozan](https://github.com/Stas-Cell-Max/password-generator-template/assets/137020431/b6a1371b-d3ed-4465-b22a-a31161c12778)
+
+
+
+
+
