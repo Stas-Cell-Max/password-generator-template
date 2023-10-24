@@ -10,6 +10,7 @@ This is a simple password generator web application that allows users to generat
 - [Contributing](#contributing)
 - [License](#license)
 - [Credits](#credits)
+- [Deployment](#deployment)
 
 ## Features
 
