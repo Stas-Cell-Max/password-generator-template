@@ -42,6 +42,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 https://owasp.org/www-community/password-special-characters
 https://developer.mozilla.org/
+https://www.w3schools.com/js/default.asp
 
 ## Deployment
 
